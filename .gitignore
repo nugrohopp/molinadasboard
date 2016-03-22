@@ -1,0 +1,9 @@
+#ignore bower components
+bower_components/*
+app/components/*
+
+#ignore sftp-config.json
+sftp-config.json
+
+#ignore sample.bowerrc
+sample.bowerrc
