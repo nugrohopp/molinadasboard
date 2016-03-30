@@ -2,13 +2,11 @@
 	angular.module( 'app',
 	[
 		/* Standard Angular Directive */
+		'ui.router',
 		'ngSanitize',
-		'ngRoute',
-		/* Third Party Angular Directive 
+		/* Third Party Angular Directive */
 		'angularUtils.directives.dirPagination',
 		'chart.js',
-		'openlayers-directive',
-		'ngFileUpload',
 		/* Custom Defined */
 	])
 })();

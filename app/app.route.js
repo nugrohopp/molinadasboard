@@ -4,13 +4,12 @@
     .module('app')
     .config(router);
 
-  function router($locationProvider, $routeProvider) {
-    $routeProvider.
-        when('/', {
+  function router($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider.
+        state('root', {
+          url:'/',
           templateUrl: 'app/home/home.html'
-        }).
-        otherwise({
-          redirectTo: '/'
         });
   }
 })();

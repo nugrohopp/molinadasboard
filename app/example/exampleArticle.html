@@ -1,0 +1,9 @@
+<div ng-controller='exampleArticle as expArticle' class="ui container">
+  <div dir-paginate="data in expArticle.datas | itemsPerPage: 4">
+    <a ui-sref="article({article_id: data.id})"><h1 ng-bind-html="data.title"></h1></a>
+    <div ng-bind-html="data.content"></div>
+    <br />
+  </div>
+  <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/partials/pager.html"></dir-pagination-controls>
+  <br />
+</div>

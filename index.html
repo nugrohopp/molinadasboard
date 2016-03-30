@@ -7,37 +7,15 @@
     <meta name="description" content="Molina Dashboard">
     <meta name="author" content="Vitradisa Pratama, Nugroho Permata Putra, Tri Sepdian A">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <!-- Online Source (Pake ini klo bower ga bisa install) -->
-      <!-- CSS -->
-          <!-- Semantic -->
-          <link href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css' rel='stylesheet' type='text/css'>
-          <!-- ChartJS -->
-          <link href="app/components/angular-chart.js/dist/angular-chart.css"></link>
 
-      <!-- JS -->
-          <!-- JQuery -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>
-          <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"><\/script>');</script>
+    <!-- CSS -->
           <!-- Semantic -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
-          <!-- AngularJS -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-sanitize.js"></script>
-          <script src="app/components/angularUtils-pagination/dirPagination.js"></script>
+          <link href='app/components/semantic/dist/semantic.min.css' rel='stylesheet' type='text/css' />
           <!-- ChartJS -->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-          <script src="app/components/angular-chart.js/dist/angular-chart.min.js"></script>
+          <link href="app/components/angular-chart.js/dist/angular-chart.css" rel='stylesheet' type='text/css' />
+          <!-- Custom Made CSS -->
 
-    <!-- Bower (Pake ini klo Online Source ga bisa diakses)-->
-      <!-- CSS -->
-          <!-- Semantic -->
-          <link href='app/components/semantic/dist/semantic.min.css' rel='stylesheet' type='text/css'>
-          <!-- ChartJS -->
-          <link href="app/components/angular-chart.js/dist/angular-chart.css"></link>
-
-      <!-- JS -->
+    <!-- JS -->
           <!-- JQuery -->
           <script src="app/components/jquery/dist/jquery.min.js"></script>
           <script>window.jQuery || document.write('<script src="app/components/jquery/dist/jquery.min.js"><\/script>');</script>
@@ -45,15 +23,14 @@
           <script src="app/components/semantic/dist/semantic.min.js"></script>
           <!-- AngularJS -->
           <script src="app/components/angular/angular.js"></script>
-          <script src="app/components/angular-route/angular-route.js"></script>
-          <script src="app/components/angular-resource/angular-resource.js"></script>
+          <script src="app/components/angular-ui-router/release/angular-ui-router.js"></script>
           <script src="app/components/angular-sanitize/angular-sanitize.js"></script>
           <script src="app/components/angularUtils-pagination/dirPagination.js"></script>
           <!-- ChartJS -->
           <script src="app/components/Chart.js/Chart.min.js"></script>
           <script src="app/components/angular-chart.js/dist/angular-chart.min.js"></script>
 
-      <!-- Angular -->
+    <!-- Angular -->
         <!-- Config -->
         <script src="app/app.module.js"></script>
         <script src="app/app.config.js"></script>
@@ -63,10 +40,14 @@
         <script src="app/utils/app.localstorage.js"></script>
         <!-- Home -->
         <script src="app/home/config.route.js"></script>
+        <!-- Example -->
+        <script src="app/example/config.route.js"></script>
+        <script src="app/example/exampleArticle.controller.js"></script>
+        <script src="app/example/exampleSingleArticle.controller.js"></script>
 </head>
 <body ng-app="app">
 <div ng-include="'app/partials/navbar.html'"></div>
-<div ng-view></div>
+<div class="container" style="padding-top: 75px;" ui-view></div>
 <div ng-include="'app/partials/footer.html'"></div>
 </body>
 </html>
