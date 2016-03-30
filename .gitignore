@@ -1,6 +1,8 @@
 #ignore bower components
 bower_components/*
 app/components/*
+node_modules/*
+MolinaDashboard-*
 
 #ignore sftp-config.json
 sftp-config.json
