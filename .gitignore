@@ -1,11 +1,9 @@
-#ignore bower components
+#ignore unnused files
 bower_components/*
 app/components/*
 node_modules/*
 MolinaDashboard-*
+npm-debug-log
 
 #ignore sftp-config.json
 sftp-config.json
-
-#ignore sample.bowerrc
-sample.bowerrc
