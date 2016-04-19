@@ -1,0 +1,75 @@
+body {
+  background-color: #9CCFE2;
+}
+
+#sidebar {
+  background-color: #379BAB;
+}
+
+#sidebar > a {
+  color: #F6FAFB;
+}
+
+#sidebar > a:hover {
+  background-color: #3891BD;
+  color: #E1DF83;
+}
+
+.konten {
+  height: 400px;
+}
+
+.spesifikasi {
+  height: 400px;
+  background-color: #379BAB;
+  overflow-y: scroll;
+}
+
+.spesifikasi > h1 {
+  color: #CBD57A;
+  font-size: 30px;
+}
+
+.spesifikasi > .ui.animated.list > .item {
+  color: #FDFEFE;
+  font-size: 25px;
+}
+
+.deskripsi {
+  height: 200px;
+  background-color: #379BAB;
+  overflow-y: scroll;
+}
+
+.deskripsi > h1 {
+  color: #CBD57A;
+  font-size: 30px;
+}
+
+.deskripsi > p {
+  color: #FDFEFE;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.ui.grid > .row > h1 {
+  color: #2F85B6;
+  font-size: 50px;
+}
+
+.tahundeskripsi {
+  display: none;
+  overflow-y: scroll;
+  height: 300px;
+  width: 200px;
+  background-color: #379BAB;
+}
+
+.tahundeskripsi > h1 {
+  color: #F6E974;
+}
+
+.tahundeskripsi > p {
+  color: #FDFEFE;
+  text-align: justify;
+}

@@ -7,10 +7,10 @@
   function router($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider.
-        state('root', {
-          url:'/',
-          templateUrl: 'app/mobil/mobil.html',
-          controller: 'mobil'
+        state('spareparts', {
+          url:'/spareparts',
+          templateUrl: 'app/spareparts/spareparts.html',
+          controller: 'spareparts'
         });
   }
 })();

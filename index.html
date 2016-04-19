@@ -14,6 +14,7 @@
           <!-- ChartJS -->
           <link href="bower_components/angular-chart.js/dist/angular-chart.css" rel='stylesheet' type='text/css' />
           <!-- Custom Made CSS -->
+          <link href='css/style.css' rel='stylesheet' type='text/css' />
 
     <!-- JS -->
           <!-- JQuery -->
@@ -38,16 +39,22 @@
         <!-- Utils -->
         <script src="app/utils/app.filter.js"></script>
         <script src="app/utils/app.localstorage.js"></script>
-        <!-- Home -->
-        <script src="app/home/config.route.js"></script>
+        <!-- Mobil -->
+        <script src="app/mobil/config.route.js"></script>
+        <script src="app/mobil/mobil.controller.js"></script>
+        <!-- Spare Parts -->
+        <script src="app/spareparts/config.route.js"></script>
+        <script src="app/spareparts/spareparts.controller.js"></script>
+        <!-- Roadmap -->
+        <script src="app/roadmap/config.route.js"></script>
+        <script src="app/roadmap/roadmap.controller.js"></script>
         <!-- Example -->
         <script src="app/example/config.route.js"></script>
         <script src="app/example/exampleArticle.controller.js"></script>
         <script src="app/example/exampleSingleArticle.controller.js"></script>
 </head>
 <body ng-app="app">
-<div ng-include="'app/partials/navbar.html'"></div>
-<div class="container" style="padding-top: 75px;" ui-view></div>
-<div ng-include="'app/partials/footer.html'"></div>
+<div ng-include="'app/partials/sidebar.html'"></div>
+<div class="ui container" ui-view></div>
 </body>
 </html>

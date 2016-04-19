@@ -7,8 +7,8 @@
   function router($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider.
-        state('root', {
-          url:'/',
+        state('mobil', {
+          url:'/mobil',
           templateUrl: 'app/mobil/mobil.html',
           controller: 'mobil'
         });

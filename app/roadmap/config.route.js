@@ -7,9 +7,10 @@
   function router($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider.
-        state('home', {
-          url:'/home',
-          templateUrl: 'app/home/home.html'
+        state('roadmap', {
+          url:'/roadmap',
+          templateUrl: 'app/roadmap/roadmap.html',
+          controller: 'roadmap'
         });
   }
 })();
