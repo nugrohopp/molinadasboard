@@ -10,7 +10,7 @@ Development Instructions:
 - install NodeJs first.
 - browse to this project directory inside cmd / terminal.
 - install dependencies on package.json with 'npm install or npm install -g for global install' .
-- install all required bower package with 'npm install bower.json'.
+- install all required bower package with 'bower install bower.json'.
 - run with 'npm start' .
 
 Compile Instruction:
