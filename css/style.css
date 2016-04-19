@@ -1,3 +1,72 @@
+@media(min-width: 1280px) {
+  /* Buat Hape */
+  .isi {
+    margin-left: 250px;
+    width: 78%;
+  }
+  .konten {
+    height: 250px;
+  }
+  .itemshowoff {
+    border: 1px solid white;
+    height: 250px;
+  }
+  .spesifikasi {
+    height: 250px;
+  }
+}
+@media(min-width: 1360px) {
+  /* Buat Layar Leptop */
+  .isi {
+    margin-left: 250px;
+    width: 80%;
+  }
+  .konten {
+    height: 300px;
+  }
+  .itemshowoff {
+    border: 1px solid white;
+    height: 300px;
+  }
+  .spesifikasi {
+    height: 300px;
+  }
+}
+@media(min-width: 1600px) {
+  /* Buat Layar PC ukuran sedang */
+  .isi {
+    margin-left: 250px;
+    width: 82%;
+  }
+  .konten {
+    height: 420px;
+  }
+  .itemshowoff {
+    border: 1px solid white;
+    height: 420px;
+  }
+  .spesifikasi {
+    height: 420px;
+  }
+}
+@media(min-width: 1920px) {
+  /* Buat Layar PC Full HD */
+  .isi {
+    margin-left: 250px;
+    width: 85%;
+  }
+  .konten {
+    height: 600px;
+  }
+  .itemshowoff {
+    border: 1px solid white;
+    height: 600px;
+  }
+  .spesifikasi {
+    height: 420px;
+  }
+}
+
 body {
   background-color: #9CCFE2;
 }
@@ -14,13 +83,10 @@ body {
   background-color: #3891BD;
   color: #E1DF83;
 }
-
-.konten {
-  height: 400px;
+.itemshowoff {
+  border: 1px solid white;
 }
-
 .spesifikasi {
-  height: 400px;
   background-color: #379BAB;
   overflow-y: scroll;
 }
