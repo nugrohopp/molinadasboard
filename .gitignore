@@ -7,3 +7,12 @@ npm-debug-log
 
 #ignore sftp-config.json
 sftp-config.json
+
+#ignore asset
+assets/*
+
+#ignore src
+src/*
+
+#ignore nodewebkit
+nodewebkit/*
