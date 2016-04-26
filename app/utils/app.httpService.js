@@ -3,8 +3,9 @@
     angular.module("app")
     .factory("httpService", httpService);
 
-    function httpService($http, $q, config) {
+    function httpService($http, $q, config, fCsv) {
         var service = {
+            getCSV: getCSV,
             get: get,
             post: post,
             put: put,
@@ -14,6 +15,17 @@
         }
 
         return service;
+
+        function getCSV(link) {
+          var request = $http({
+            url: config.apiAddress+"/"+link,
+            method: "GET",
+            headers: {
+              "Content-type": "text/csv"
+            }
+          });
+          return(request.then(handleCSV,handleError));
+        }
 
         function get(link) {
           var request = $http({
@@ -84,6 +96,10 @@
             data: jsonData
           });
           return(request.then(handleSuccess,handleError));
+        }
+
+        function handleCSV(response) {
+          return(JSON.parse(fCsv.toJson(response.data)));
         }
 
         function handleSuccess(response) {

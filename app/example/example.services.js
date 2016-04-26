@@ -11,7 +11,7 @@
         return service;
 
         function getAllData() {
-          var data = httpService.get("example.json");
+          var data = httpService.getCSV("example.csv");
           return data;
         }
 
