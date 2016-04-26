@@ -29,7 +29,8 @@
     "ng-file-upload-shim": "~11.0.0",
     "ng-file-upload": "~11.0.0",
     "semantic":"~2.1",
-    "threesixty-slider":"^2.0.5",
-    "unity-web-player":"^0.0.6",
+    "threesixty-slider":"~2.0.5",
+    "angular-csv-service":"~0.1.0",
+    "unity-web-player":"0.0.6",
   }
 }
