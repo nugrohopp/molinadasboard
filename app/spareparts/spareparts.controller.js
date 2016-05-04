@@ -15,8 +15,8 @@
             imagePath:'assets/car/', // path of the image assets
             filePrefix: '', // file prefix if any
             ext: '.png', // extention for the assets
-            height: 420,
-            width: 977,
+            height: 300,
+            width: 820,
             navigation: true,
             disableSpin: false // Default false
         });
