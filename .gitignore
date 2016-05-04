@@ -1,18 +1,7 @@
 #ignore unnused files
-bower_components/*
-app/components/*
 node_modules/*
 MolinaDashboard-*
 npm-debug-log
 
 #ignore sftp-config.json
 sftp-config.json
-
-#ignore asset
-assets/*
-
-#ignore src
-src/*
-
-#ignore nodewebkit
-nodewebkit/*
