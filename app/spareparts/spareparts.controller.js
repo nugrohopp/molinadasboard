@@ -3,8 +3,23 @@
     .module('app')
     .controller('spareparts', spareparts);
 
-  function spareparts() {
-    var s = this;
+  function spareparts($stateParams,sparepartsService,sparepartsSpecService) {
+    var spareparts = this;
+
+    spareparts.sparepartsID = $stateParams.spareparts_id;
+
+    sparepartsService.getAllData().then(
+			function(allData) {
+				spareparts.sparepartsData = allData;
+			}
+		);
+
+    sparepartsSpecService.getAllData().then(
+			function(allData) {
+				spareparts.sparepartsSpecData = allData;
+			}
+		);
+
     $(document).ready(function(){
       var mobilmuter = $('.mobilmuter').ThreeSixty({
             totalFrames: 52, // Total no. of image you have for 360 slider
@@ -12,8 +27,8 @@
             currentFrame: 1, // This the start frame for auto spin
             imgList: '.threesixty_images', // selector for image list
             progress: '.spinner', // selector to show the loading progress
-            imagePath:'assets/car/', // path of the image assets
-            filePrefix: '', // file prefix if any
+            imagePath:'assets/spareparts/', // path of the image assets
+            filePrefix: 'mesinJalak_', // file prefix if any
             ext: '.png', // extention for the assets
             height: 300,
             width: 820,
