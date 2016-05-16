@@ -4,7 +4,7 @@
 
   <div class="ui grid">
     <div class="row">
-      <h1>Nama Mobil</h1>
+      <h1>{{ m.mobilData[s.mobilID - 1] }}</h1>
     </div>
     <div class="row">
       <div class="twelve wide column konten">
@@ -45,12 +45,7 @@
     <div class="row">
       <div class="sixteen wide column deskripsi">
         <h1>Deskripsi</h1>
-        <p>
-          Objectively myocardinate pandemic data through covalent benefits. Uniquely harness magnetic e-services whereas distinctive technologies. Compellingly engage plug-and-play relationships through client-centered growth strategies. Globally recaptiualize technically sound systems through 24/365 data. Proactively repurpose inexpensive users whereas distinctive services.<br />
-
-          Conveniently promote synergistic process improvements with top-line outsourcing. Enthusiastically enhance clicks-and-mortar strategic theme areas after quality networks. Quickly reintermediate customized resources with customized content. Competently simplify progressive web services after one-to-one results. Efficiently unleash ethical e-markets and seamless "outside the box" thinking.<br />
-
-          Enthusiastically leverage other's orthogonal mindshare vis-a-vis superior action items. Distinctively grow corporate expertise vis-a-vis excellent mindshare. Progressively scale.<br />
+        <p ng-bind-html="m.mobilData[s.mobilID - 1].deskripsi"><br />
         </p>
       </div>
     </div>
