@@ -11,7 +11,7 @@
         return service;
 
         function getAllData() {
-          var data = httpService.getCSV("spareparts.csv");
+          var data = httpService.get("spesifikasi.json");
           return data;
         }
 
