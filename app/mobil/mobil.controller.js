@@ -13,7 +13,6 @@
     mobilService.getAllData().then(
 			function(allData) {
 				mobil.mobilData = allData;
-        console.log(mobil);
         folder = mobil.mobilData[mobil.mobilID - 1].model
         $(document).ready(function(){
           var mobilmuter = $('.mobilmuter').ThreeSixty({
