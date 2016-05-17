@@ -8,7 +8,6 @@
     height: 250px;
   }
   .itemshowoff {
-    border: 1px solid white;
     height: 250px;
   }
   .spesifikasi {
@@ -25,7 +24,6 @@
     height: 300px;
   }
   .itemshowoff {
-    border: 1px solid white;
     height: 300px;
   }
   .spesifikasi {
@@ -42,7 +40,6 @@
     height: 420px;
   }
   .itemshowoff {
-    border: 1px solid white;
     height: 420px;
   }
   .spesifikasi {
@@ -59,7 +56,6 @@
     height: 600px;
   }
   .itemshowoff {
-    border: 1px solid white;
     height: 600px;
   }
   .spesifikasi {
@@ -82,9 +78,6 @@ body {
 #sidebar > a:hover {
   background-color: #3891BD;
   color: #E1DF83;
-}
-.itemshowoff {
-  border: 1px solid white;
 }
 .spesifikasi {
   background-color: #379BAB;
