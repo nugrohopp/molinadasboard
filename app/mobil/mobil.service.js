@@ -11,7 +11,7 @@
         return service;
 
         function getAllData() {
-          var data = httpService.getCSV("mobil.csv");
+          var data = httpService.get("model_mobil.json");
           return data;
         }
 
