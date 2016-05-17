@@ -29,12 +29,15 @@
                 navigation: true,
                 disableSpin: false // Default false
             });
-          });
+        });
         sparepartsService.getAllData().then(
       			function(allData) {
       				mobil.sparepartsData = allData;
       			}
-      		);
+      	);
+        // mobil.detailSpareparts = function(id_sparepart) {
+        //   console.log(id_sparepart);
+        // }
 			}
 		);
   }

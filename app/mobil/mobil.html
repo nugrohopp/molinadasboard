@@ -25,7 +25,7 @@
         <div class="ui animated list">
           <div class="item" ng-repeat="sp in m.sparepartsData | filter: { mobil_id: m.mobilID }">
             <i class="caret right icon"></i>
-            <div class="content">{{ sp.nama_sparepart }}</div>
+            <div class="content" ui-sref="spareparts({spareparts_id: sp.sparepart_id})">{{ sp.nama_sparepart }}</div>
           </div>
         </div>
       </div>
