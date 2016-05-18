@@ -17,8 +17,10 @@
             <ol class="threesixty_images"></ol>
           </div>
         </div>
-        <i class="ui chevron left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
-        <i class="ui chevron right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
+        <i class="ui caret left icon" ng-if="m.previous == 0"></i>
+        <i class="ui caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
+        <i class="ui caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
+        <i class="ui caret right icon" ng-if="m.next == 4"></i>
       </div>
       <div class="four wide column spesifikasi">
         <h1>Spesifikasi</h1>

@@ -18,8 +18,10 @@
           </div>
           <ol class="threesixty_images"></ol>
         </div> -->
-        <i class="ui chevron left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
-        <i class="ui chevron right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
+        <i class="ui caret left icon" ng-if="s.previous == 0"></i>
+        <i class="ui caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
+        <i class="ui caret right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
+        <i class="ui caret right icon" ng-if="s.next == 30"></i>
       </div>
       <!-- <div class="four wide column spesifikasi">
         <h1>Spesifikasi</h1>
