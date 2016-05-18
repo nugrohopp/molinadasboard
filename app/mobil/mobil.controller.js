@@ -29,6 +29,10 @@
                 navigation: true,
                 disableSpin: false // Default false
             });
+            $('.ui.primary.button.show3d').click(function() {
+                $('.ui.modal').modal('show');
+            });
+
         });
         sparepartsService.getAllData().then(
       			function(allData) {

@@ -10,6 +10,11 @@
       <div class="twelve wide column konten">
         <div class="itemshowoff">
           <!-- <unity-web-player source="assets/3d/mobil.unity3d" autoplay="true" width="820" height="300"></unity-web-player> -->
+          <i class="ui huge caret left icon" ng-if="m.previous == 0"></i>
+          <i class="ui huge caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
+          <button class="ui primary button show3d">Show 3D</button>
+          <i class="ui huge caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
+          <i class="ui huge caret right icon" ng-if="m.next == 4"></i>
           <div class="itemshowoff threesixty mobilmuter">
             <div class="spinner">
                 <span>0%</span>
@@ -17,10 +22,6 @@
             <ol class="threesixty_images"></ol>
           </div>
         </div>
-        <i class="ui caret left icon" ng-if="m.previous == 0"></i>
-        <i class="ui caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
-        <i class="ui caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
-        <i class="ui caret right icon" ng-if="m.next == 4"></i>
       </div>
       <div class="four wide column spesifikasi">
         <h1>Spesifikasi</h1>
@@ -39,6 +40,16 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+      {{ m.mobilData[m.mobilID - 1].nama_mobil }} 3D Model
+    </div>
+    <div class="content">
+      Model 3D nya disini
+    </div>
   </div>
 
 </div>

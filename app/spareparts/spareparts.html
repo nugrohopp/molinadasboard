@@ -10,18 +10,20 @@
     </div>
     <div class="row">
       <div class="twelve wide column konten">
-        <img ng-src="assets/komponen/{{ s.sparepartsData[s.sparepartsID - 1].pic }}" height="400px;" />
+        <i class="ui huge caret left icon" ng-if="s.previous == 0"></i>
+        <i class="ui huge caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
+        <i class="ui huge caret right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
+        <i class="ui huge caret right icon" ng-if="s.next == 30"></i>
         <br />
+        <img ng-src="assets/komponen/{{ s.sparepartsData[s.sparepartsID - 1].pic }}" height="350px;" />
+
         <!-- <div class="itemshowoff threesixty mobilmuter">
           <div class="spinner">
               <span>0%</span>
           </div>
           <ol class="threesixty_images"></ol>
         </div> -->
-        <i class="ui caret left icon" ng-if="s.previous == 0"></i>
-        <i class="ui caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
-        <i class="ui caret right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
-        <i class="ui caret right icon" ng-if="s.next == 30"></i>
+
       </div>
       <!-- <div class="four wide column spesifikasi">
         <h1>Spesifikasi</h1>
