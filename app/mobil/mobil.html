@@ -12,14 +12,18 @@
           <!-- <unity-web-player source="assets/3d/mobil.unity3d" autoplay="true" width="820" height="300"></unity-web-player> -->
           <i class="ui huge caret left icon" ng-if="m.previous == 0"></i>
           <i class="ui huge caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
-          <button class="ui primary button show3d">Show 3D</button>
+          <button class="ui primary button" ng-click="mobil.show3d = false;">Show 2D</button>
+          <button class="ui primary button" ng-click="mobil.show3d = true;">Show 3D</button>
           <i class="ui huge caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
           <i class="ui huge caret right icon" ng-if="m.next == 4"></i>
-          <div class="itemshowoff threesixty mobilmuter">
+          <div ng-hide="mobil.show3d == true" class="itemshowoff threesixty mobilmuter">
             <div class="spinner">
                 <span>0%</span>
             </div>
             <ol class="threesixty_images"></ol>
+          </div>
+          <div ng-hide="mobil.show3d == false" class="itemshowoff">
+            Konten 3d nya disini
           </div>
         </div>
       </div>
@@ -40,16 +44,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="ui modal">
-    <i class="close icon"></i>
-    <div class="header">
-      {{ m.mobilData[m.mobilID - 1].nama_mobil }} 3D Model
-    </div>
-    <div class="content">
-      Model 3D nya disini
-    </div>
   </div>
 
 </div>

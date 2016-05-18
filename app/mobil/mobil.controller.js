@@ -6,6 +6,7 @@
   function mobil($stateParams,mobilService,sparepartsService) {
     var mobil = this;
     var folder = "car_";
+    mobil.show3d = false;
     mobil.mobilID = $stateParams.mobil_id;
     mobil.previous = parseInt(mobil.mobilID) - 1;
     mobil.next = parseInt(mobil.mobilID) + 1;
@@ -29,10 +30,6 @@
                 navigation: true,
                 disableSpin: false // Default false
             });
-            $('.ui.primary.button.show3d').click(function() {
-                $('.ui.modal').modal('show');
-            });
-
         });
         sparepartsService.getAllData().then(
       			function(allData) {
