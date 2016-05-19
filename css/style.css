@@ -1,13 +1,11 @@
 @media(min-width: 1280px) {
   /* Buat Hape */
   .isi {
-    margin-left: 250px;
-    width: 78%;
+    margin-left: 350px;
+    width: 60%;
+    height: 600px;
   }
   .konten {
-    height: 250px;
-  }
-  .itemshowoff {
     height: 250px;
   }
   .spesifikasi {
@@ -17,13 +15,11 @@
 @media(min-width: 1360px) {
   /* Buat Layar Leptop */
   .isi {
-    margin-left: 250px;
-    width: 80%;
+    margin-left: 350px;
+    width: 70%;
+    height: 600px;
   }
   .konten {
-    height: 300px;
-  }
-  .itemshowoff {
     height: 300px;
   }
   .spesifikasi {
@@ -39,9 +35,6 @@
   .konten {
     height: 420px;
   }
-  .itemshowoff {
-    height: 420px;
-  }
   .spesifikasi {
     height: 420px;
   }
@@ -55,9 +48,6 @@
   .konten {
     height: 600px;
   }
-  .itemshowoff {
-    height: 600px;
-  }
   .spesifikasi {
     height: 420px;
   }
@@ -69,10 +59,12 @@ body {
 
 #sidebar {
   background-color: #379BAB;
+  width: 300px;
 }
 
 #sidebar > a {
   color: #F6FAFB;
+  font-size: 50px;
 }
 
 #sidebar > a:hover {
