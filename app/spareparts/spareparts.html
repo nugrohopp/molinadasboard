@@ -2,54 +2,37 @@
 
   <div class="ui grid">
     <div class="row">
-      <h1>Nama Spare Parts</h1>
+      <h1>{{ s.sparepartsData[s.sparepartsID - 1].nama_sparepart }}</h1>
     </div>
     <div class="row">
-      <div class="twelve wide column konten">
-        <div class="itemshowoff">
-          Sparepartsnya disini
+      <div class="twelve wide column konten"id="scroll">
+        <i class="ui huge yellow caret left icon" ng-if="s.previous == 0"></i>
+        <i class="ui huge blue caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
+        <button class="ui primary button" ui-sref="mobil({mobil_id: s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].mobil_id })">Spareparts {{ s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].nama_mobil }}</button>
+        <i class="ui huge blue caret right icon" ng-if="s.next < 15" ui-sref="spareparts({spareparts_id: s.next})"></i>
+        <i class="ui huge yellow caret right icon" ng-if="s.next == 15"></i>
+        <div class="threesixty sparepartsmuter">
+          <div class="spinner">
+              <span>0%</span>
+          </div>
+          <ol class="threesixty_images"></ol>
         </div>
+
       </div>
-      <div class="four wide column spesifikasi">
+      <!-- <div class="four wide column spesifikasi">
         <h1>Spesifikasi</h1>
         <div class="ui animated list">
-          <div class="item">
+          <div ng-repeat="spek in s.sparepartsSpecData" class="item">
             <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
+            <div class="content" ng-bind-html="spek.detail"></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="row">
-      <div class="sixteen wide column deskripsi">
+      <div class="sixteen wide column deskripsi"id="scroll">
         <h1>Deskripsi</h1>
-        <p>
-          Objectively myocardinate pandemic data through covalent benefits. Uniquely harness magnetic e-services whereas distinctive technologies. Compellingly engage plug-and-play relationships through client-centered growth strategies. Globally recaptiualize technically sound systems through 24/365 data. Proactively repurpose inexpensive users whereas distinctive services.<br />
-
-          Conveniently promote synergistic process improvements with top-line outsourcing. Enthusiastically enhance clicks-and-mortar strategic theme areas after quality networks. Quickly reintermediate customized resources with customized content. Competently simplify progressive web services after one-to-one results. Efficiently unleash ethical e-markets and seamless "outside the box" thinking.<br />
-
-          Enthusiastically leverage other's orthogonal mindshare vis-a-vis superior action items. Distinctively grow corporate expertise vis-a-vis excellent mindshare. Progressively scale.<br />
-        </p>
+        <p>{{ s.sparepartsData[s.sparepartsID - 1].deskripsi }}</p>
       </div>
     </div>
 

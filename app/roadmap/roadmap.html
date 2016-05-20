@@ -1,28 +1,18 @@
 <div ng-controller='roadmap as r'>
 
-  <div class="ui grid">
+  <div class="ui middle aligned left aligned grid">
     <div class="row">
       <h1>Roadmap</h1>
     </div>
     <div class="row">
-      <i class="radio icon tahun1"></i>
-      <i class="radio icon tahun2"></i>
-      <i class="radio icon tahun3"></i>
-      <i class="radio icon tahun4"></i>
-      <i class="radio icon tahun5"></i>
+	    <div class="timeline"><br><br>
+          <div class="timeline-item" ng-repeat="rm in r.roadmapData">
+              <div class="year">{{ rm.tahun }} <span class="marker"><span class="dot"></span></span>
+              </div>
+              <div class="info" ng-bind-html="rm.deskripsi"></div>
+          </div>
+      </div>
     </div>
-
-    <div class="tahundeskripsi">
-      <h1>Bentuk Tim</h1>
-      <p>
-        Efficiently envisioneer reliable expertise and seamless functionalities. Appropriately communicate strategic ROI before virtual e-commerce. Energistically utilize backend paradigms for collaborative data. Continually envisioneer holistic networks with optimal growth strategies. Interactively repurpose diverse information with intuitive resources.<br />
-
-        Phosfluorescently engineer ethical sources through cost effective channels. Dramatically parallel task ubiquitous web services through corporate process improvements. Professionally envisioneer 24/7 infrastructures via cutting-edge systems. Uniquely evisculate timely "outside the box" thinking before efficient methodologies. Monotonectally promote interactive data via technically sound ideas.<br />
-
-        Professionally synthesize emerging best practices and scalable technologies. Rapidiously benchmark go forward technologies after synergistic meta-services. Competently envisioneer.<br />
-      </p>
-    </div>
-
   </div>
 
 </div>

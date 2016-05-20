@@ -2,54 +2,42 @@
 
   <div class="ui grid">
     <div class="row">
-      <h1>Nama Mobil</h1>
+      <h1>{{ m.mobilData[m.mobilID - 1].nama_mobil }}</h1>
     </div>
     <div class="row">
       <div class="twelve wide column konten">
-        <div class="itemshowoff">
-          Mobilnya disini
+        <div>
+          <i class="ui huge yellow caret left icon" ng-if="m.previous == 0"></i>
+          <i class="ui huge blue caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
+          <button class="ui primary button" ng-click="m.show3d = false;">Show 2D</button>
+          <button class="ui positive button" ng-click="m.show3d = true;">Show 3D</button>
+          <i class="ui huge blue caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
+          <i class="ui huge yellow caret right icon" ng-if="m.next == 4"></i>
+          <div ng-hide="m.show3d == true" class="threesixty mobilmuter">
+            <div class="spinner">
+                <span>0%</span>
+            </div>
+            <ol class="threesixty_images"></ol>
+          </div>
+         <div ng-hide="m.show3d == false">
+            <iframe ng-src="{{ m.url3d }}" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+          </div>
         </div>
       </div>
-      <div class="four wide column spesifikasi">
+      <div class="four wide column spesifikasi"id="scroll">
         <h1>Spesifikasi</h1>
         <div class="ui animated list">
-          <div class="item">
+          <div class="item" ng-repeat="sp in m.sparepartsData | filter: { mobil_id: m.mobilID }">
             <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
-          </div>
-          <div class="item">
-            <i class="caret right icon"></i>
-            <div class="content">Loren Ipsum</div>
+            <div class="content" ui-sref="spareparts({spareparts_id: sp.sparepart_id})">{{ sp.nama_sparepart }}</div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="sixteen wide column deskripsi">
+      <div class="sixteen wide column deskripsi"id="scroll">
         <h1>Deskripsi</h1>
-        <p>
-          Objectively myocardinate pandemic data through covalent benefits. Uniquely harness magnetic e-services whereas distinctive technologies. Compellingly engage plug-and-play relationships through client-centered growth strategies. Globally recaptiualize technically sound systems through 24/365 data. Proactively repurpose inexpensive users whereas distinctive services.<br />
-
-          Conveniently promote synergistic process improvements with top-line outsourcing. Enthusiastically enhance clicks-and-mortar strategic theme areas after quality networks. Quickly reintermediate customized resources with customized content. Competently simplify progressive web services after one-to-one results. Efficiently unleash ethical e-markets and seamless "outside the box" thinking.<br />
-
-          Enthusiastically leverage other's orthogonal mindshare vis-a-vis superior action items. Distinctively grow corporate expertise vis-a-vis excellent mindshare. Progressively scale.<br />
-        </p>
+        <p ng-bind-html="m.mobilData[m.mobilID - 1].deskripsi"></p>
       </div>
     </div>
 

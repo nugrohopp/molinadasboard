@@ -10,7 +10,13 @@
         state('root', {
           url:'/',
           templateUrl: 'app/mobil/mobil.html',
-          controller: 'mobil'
-        });
+          controller: 'mobil',
+          onEnter: function ($state, $stateParams) {
+            console.log($stateParams.mobil_id);
+            if (!$stateParams.mobil_id) {
+              $stateParams.mobil_id = 1;
+            }
+          },
+    });
   }
 })();

@@ -8,7 +8,7 @@
     $urlRouterProvider.otherwise("/");
     $stateProvider.
         state('spareparts', {
-          url:'/spareparts',
+          url:'/spareparts/:spareparts_id',
           templateUrl: 'app/spareparts/spareparts.html',
           controller: 'spareparts'
         });

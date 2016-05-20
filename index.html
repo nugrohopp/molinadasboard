@@ -11,10 +11,10 @@
     <!-- CSS -->
           <!-- Semantic -->
           <link href='bower_components/semantic/dist/semantic.min.css' rel='stylesheet' type='text/css' />
-          <!-- ChartJS -->
-          <link href="bower_components/angular-chart.js/dist/angular-chart.css" rel='stylesheet' type='text/css' />
           <!-- Custom Made CSS -->
           <link href='css/style.css' rel='stylesheet' type='text/css' />
+          <!-- 360 Slider -->
+          <link href='bower_components/threesixty-slider/src/styles/threesixty.css' rel='stylesheet' type='text/css' />
 
     <!-- JS -->
           <!-- JQuery -->
@@ -22,14 +22,16 @@
           <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>');</script>
           <!-- Semantic -->
           <script src="bower_components/semantic/dist/semantic.min.js"></script>
+          <!-- Webcomponent -->
+          <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
           <!-- AngularJS -->
           <script src="bower_components/angular/angular.js"></script>
           <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
           <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
           <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
-          <!-- ChartJS -->
-          <script src="bower_components/Chart.js/Chart.min.js"></script>
-          <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+          <script src="bower_components/angular-csv-service/angular-csv-service.js"></script>
+          <!-- 360 Slider -->
+          <script src="bower_components/threesixty-slider/src/threesixty.js"></script>
 
     <!-- Angular -->
         <!-- Config -->
@@ -39,17 +41,22 @@
         <!-- Utils -->
         <script src="app/utils/app.filter.js"></script>
         <script src="app/utils/app.localstorage.js"></script>
+        <script src="app/utils/app.httpService.js"></script>
         <!-- Mobil -->
         <script src="app/mobil/config.route.js"></script>
         <script src="app/mobil/mobil.controller.js"></script>
+        <script src="app/mobil/mobil.service.js"></script>
         <!-- Spare Parts -->
         <script src="app/spareparts/config.route.js"></script>
         <script src="app/spareparts/spareparts.controller.js"></script>
+        <script src="app/spareparts/spareparts.service.js"></script>
         <!-- Roadmap -->
         <script src="app/roadmap/config.route.js"></script>
         <script src="app/roadmap/roadmap.controller.js"></script>
+        <script src="app/roadmap/roadmap.service.js"></script>
         <!-- Example -->
         <script src="app/example/config.route.js"></script>
+        <script src="app/example/example.services.js"></script>
         <script src="app/example/exampleArticle.controller.js"></script>
         <script src="app/example/exampleSingleArticle.controller.js"></script>
 </head>
