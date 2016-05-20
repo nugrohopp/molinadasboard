@@ -7,12 +7,12 @@
     <div class="row">
       <div class="twelve wide column konten">
         <div>
-          <i class="ui huge caret left icon" ng-if="m.previous == 0"></i>
-          <i class="ui huge caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
+          <i class="ui huge yellow caret left icon" ng-if="m.previous == 0"></i>
+          <i class="ui huge blue caret left icon" ng-if="m.previous > 0" ui-sref="mobil({mobil_id: m.previous})"></i>
           <button class="ui primary button" ng-click="m.show3d = false;">Show 2D</button>
           <button class="ui positive button" ng-click="m.show3d = true;">Show 3D</button>
-          <i class="ui huge caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
-          <i class="ui huge caret right icon" ng-if="m.next == 4"></i>
+          <i class="ui huge blue caret right icon" ng-if="m.next < 4" ui-sref="mobil({mobil_id: m.next})"></i>
+          <i class="ui huge yellow caret right icon" ng-if="m.next == 4"></i>
           <div ng-hide="m.show3d == true" class="threesixty mobilmuter">
             <div class="spinner">
                 <span>0%</span>

@@ -6,11 +6,11 @@
     </div>
     <div class="row">
       <div class="twelve wide column konten"id="scroll">
-        <i class="ui huge caret left icon" ng-if="s.previous == 0"></i>
-        <i class="ui huge caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
+        <i class="ui huge yellow caret left icon" ng-if="s.previous == 0"></i>
+        <i class="ui huge blue caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
         <button class="ui primary button" ui-sref="mobil({mobil_id: s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].mobil_id })">Spareparts {{ s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].nama_mobil }}</button>
-        <i class="ui huge caret right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
-        <i class="ui huge caret right icon" ng-if="s.next == 30"></i>
+        <i class="ui huge blue caret right icon" ng-if="s.next < 15" ui-sref="spareparts({spareparts_id: s.next})"></i>
+        <i class="ui huge yellow caret right icon" ng-if="s.next == 15"></i>
         <div class="threesixty sparepartsmuter">
           <div class="spinner">
               <span>0%</span>
