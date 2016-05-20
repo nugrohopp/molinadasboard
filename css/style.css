@@ -11,6 +11,10 @@
   .spesifikasi {
     height: 250px;
   }
+  iframe {
+    width: 600px;
+    height: 200px;
+  }
 }
 @media(min-width: 1360px) {
   /* Buat Layar Leptop */
@@ -25,36 +29,52 @@
   .spesifikasi {
     height: 300px;
   }
+  iframe {
+    width: 700px;
+    height: 250px;
+  }
 }
 @media(min-width: 1600px) {
   /* Buat Layar PC ukuran sedang */
   .isi {
-    margin-left: 250px;
-    width: 82%;
+    margin-left: 350px;
+    width: 75%;
   }
   .konten {
     height: 420px;
   }
   .spesifikasi {
     height: 420px;
+  }
+  iframe {
+    width: 850px;
+    height: 350px;
   }
 }
 @media(min-width: 1920px) {
   /* Buat Layar PC Full HD */
   .isi {
-    margin-left: 250px;
-    width: 85%;
+    margin-left: 350px;
+    width: 79%;
   }
   .konten {
     height: 600px;
   }
   .spesifikasi {
-    height: 420px;
+    height: 600px;
+  }
+  iframe {
+    width: 1050px;
+    height: 550px;
   }
 }
 
 body {
   background-color: #9CCFE2;
+}
+
+.ui .button {
+  border-radius: 0;
 }
 
 #sidebar {
@@ -73,7 +93,11 @@ body {
 }
 .spesifikasi {
   background-color: #379BAB;
-  overflow-y: scroll;
+  overflow-y:scroll;
+  border: 1px solid;
+  border-color: #379BAB;
+  border-radius: 10px;
+  padding:10px 0px 10px 0px;
 }
 
 .spesifikasi > h1 {
@@ -87,20 +111,24 @@ body {
 }
 
 .deskripsi {
-  height: 200px;
+  height: 300px;
   background-color: #379BAB;
-  overflow-y: scroll;
+  overflow-y:scroll;
+  border: 3px solid;
+  border-color: #379BAB;
+  border-radius: 10px;
+  padding:10px 0px 10px 0px;
 }
 
 .deskripsi > h1 {
   color: #CBD57A;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .deskripsi > p {
   color: #FDFEFE;
   text-align: justify;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .ui.grid > .row > h1 {
@@ -146,28 +174,27 @@ body {
     transition: all 1s ease;
 }
 .timeline .timeline-item .year {
-    font-size: 24px;
+    font-size: 44px;
     font-weight: bold;
     width: 22%;
 }
 .timeline .timeline-item .info {
-    width: 100%;
     width: 78%;
-    margin-left: -2px;
-    padding: 0 0 40px 35px;
+    margin-left: 148px;
+    padding: 0 40px 40px 35px;
     border-left: 4px solid #aaa;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 30px;
 }
 .timeline .timeline-item .marker {
     background-color: #fff;
     border: 4px solid #aaa;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border-radius: 100px;
     display: block;
     float: right;
-    margin-right: -14px;
+    margin-right: 172px;
     z-index: 2000;
     position: relative;
 }
@@ -187,8 +214,8 @@ body {
     transition: all 1s ease;
     display: block;
     border: 4px solid white;
-    height: 12px;
-    width: 12px;
+    height: 23px;
+    width: 23px;
     border-radius: 100px;
     float: right;
     z-index: 2000;
@@ -200,4 +227,21 @@ body {
     transition: all 1s ease;
     background-color: #9DB668;
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#scroll::-webkit-scrollbar{
+width:12px;
+background-color:#379BAB;
+background-color: transparent;
+}
+#scroll::-webkit-scrollbar-thumb{
+background-color:#CBD57A;
+background-color: transparent;
+border-radius:20px;
+}
+#scroll::-webkit-scrollbar-thumb:hover{
+background-color:#C6D078;
+}
+#scroll::-webkit-scrollbar-thumb:active{
+background-color:#BDC671;
 }
