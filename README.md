@@ -4,6 +4,7 @@ Kelompok:
 - Nugroho Permata Putra
 - Tri Sepdian Aditia
 - Vitradisa Pratama
+
 3d modelling team:
 + Juju juhaeriyah
 + Indah Sari Mukkarmah
