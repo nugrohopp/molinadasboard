@@ -3,9 +3,9 @@
     .module('app')
     .controller('spareparts', spareparts);
 
-  function spareparts($stateParams,sparepartsService,sparepartsSpecService) {
+  function spareparts($stateParams,sparepartsService,mobilService) {
     var spareparts = this;
-
+    var folder = "bms";
     spareparts.sparepartsID = $stateParams.spareparts_id;
     spareparts.previous = parseInt(spareparts.sparepartsID) - 1;
     spareparts.next = parseInt(spareparts.sparepartsID) + 1;
@@ -13,24 +13,29 @@
     sparepartsService.getAllData().then(
 			function(allData) {
 				spareparts.sparepartsData = allData;
+        folder = spareparts.sparepartsData[spareparts.sparepartsID - 1].pic;
+        $(document).ready(function(){
+          var mobilmuter = $('.sparepartsmuter').ThreeSixty({
+                totalFrames: 15,
+                endFrame: 15,
+                currentFrame: 1,
+                imgList: '.threesixty_images',
+                progress: '.spinner',
+                imagePath:'assets/komponen/'+folder+'/',
+                filePrefix: '',
+                ext: '.jpg',
+                height: window.innerHeight*(38/100),
+                width: window.innerWidth*(69/100),
+                navigation: true,
+                disableSpin: true
+          });
+        });
+        mobilService.getAllData().then(
+      			function(allData) {
+      				spareparts.mobilData = allData;
+      			}
+      	);
 			}
 		);
-
-    // $(document).ready(function(){
-    //   var mobilmuter = $('.mobilmuter').ThreeSixty({
-    //         totalFrames: 52, // Total no. of image you have for 360 slider
-    //         endFrame: 30, // end frame for the auto spin animation
-    //         currentFrame: 1, // This the start frame for auto spin
-    //         imgList: '.threesixty_images', // selector for image list
-    //         progress: '.spinner', // selector to show the loading progress
-    //         imagePath:'assets/spareparts/', // path of the image assets
-    //         filePrefix: 'mesinJalak_', // file prefix if any
-    //         ext: '.png', // extention for the assets
-    //         height: 300,
-    //         width: 820,
-    //         navigation: true,
-    //         disableSpin: false // Default false
-    //     });
-    //   });
   }
 })();

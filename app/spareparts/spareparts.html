@@ -1,7 +1,3 @@
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>');</script>
-<link href='bower_components/threesixty-slider/src/styles/threesixty.css' rel='stylesheet' type='text/css' />
-<script src="bower_components/threesixty-slider/src/threesixty.js"></script>
 <div ng-controller='spareparts as s'>
 
   <div class="ui grid">
@@ -9,20 +5,18 @@
       <h1>{{ s.sparepartsData[s.sparepartsID - 1].nama_sparepart }}</h1>
     </div>
     <div class="row">
-      <div class="twelve wide column konten">
+      <div class="twelve wide column konten"id="scroll">
         <i class="ui huge caret left icon" ng-if="s.previous == 0"></i>
         <i class="ui huge caret left icon" ng-if="s.previous > 0" ui-sref="spareparts({spareparts_id: s.previous})"></i>
+        <button class="ui primary button" ui-sref="mobil({mobil_id: s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].mobil_id })">Spareparts {{ s.mobilData[s.sparepartsData[s.sparepartsID - 1].mobil_id - 1].nama_mobil }}</button>
         <i class="ui huge caret right icon" ng-if="s.next < 30" ui-sref="spareparts({spareparts_id: s.next})"></i>
         <i class="ui huge caret right icon" ng-if="s.next == 30"></i>
-        <br />
-        <img ng-src="assets/komponen/{{ s.sparepartsData[s.sparepartsID - 1].pic }}" height="350px;" />
-
-        <!-- <div class="itemshowoff threesixty mobilmuter">
+        <div class="threesixty sparepartsmuter">
           <div class="spinner">
               <span>0%</span>
           </div>
           <ol class="threesixty_images"></ol>
-        </div> -->
+        </div>
 
       </div>
       <!-- <div class="four wide column spesifikasi">
@@ -36,7 +30,7 @@
       </div> -->
     </div>
     <div class="row">
-      <div class="sixteen wide column deskripsi">
+      <div class="sixteen wide column deskripsi"id="scroll">
         <h1>Deskripsi</h1>
         <p>{{ s.sparepartsData[s.sparepartsID - 1].deskripsi }}</p>
       </div>
