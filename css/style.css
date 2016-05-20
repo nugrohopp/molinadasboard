@@ -160,7 +160,7 @@ body {
     width: 100%;
 }
 .timeline .timeline-item .info, .timeline .timeline-item .year {
-    color: #eee;
+    color: #2F85B6;
     display: block;
     float:left;
     -webkit-transition: all 1s ease;
