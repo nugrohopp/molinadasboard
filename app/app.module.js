@@ -6,7 +6,6 @@
 		'ngSanitize',
 		/* Third Party Angular Directive */
 		'angularUtils.directives.dirPagination',
-		'chart.js',
 		'fCsv',
 		/* Custom Defined */
 	])
